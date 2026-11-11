@@ -1,13 +1,8 @@
 
 # Virtual-private-cloud
 Build and configured using console and cli an AWS VPC
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://nextwork.ai/static/nextwork-logo-paper.svg" /><img src="https://nextwork.ai/static/nextwork-logo-leather.svg" alt="NextWork" width="300" /></picture>
 
 # Build a Virtual Private Cloud
-
-**Project Link:** [View Project](https://nextwork.ai/projects/7f907ac7-2473-5c15-a8be-edb36581cdba)
-
-**Author:** HL
 
 ---
 
@@ -29,8 +24,6 @@ VPCs are secure, isolated private networks that are being hosted within a public
 
 There was already a default VPC in my account ever since my AWS account was created. This is because without it I woud have to learn how to setup vpc before accessing different services of aws.
 
-![Virtual Private Clouds (VPCs)](https://nextwork.ai/hl-2/uploads/7f907ac7-2473-5c15-a8be-edb36581cdba_2facf927)
-
 ### Defining IPv4 CIDR blocks
 
 To set up my VPC, I had to define an IPv4 CIDR block, which is 10.0.0.0/26.
@@ -49,7 +42,6 @@ Subnets are division of a large network. There are already subnets existing in m
 
 The difference between public and private subnets are that the latter doesn't have direct access to the internet. It's used for internal resources that doesn't need to be publicly available. For a subnet to be considered public, it has to to be connected to the internet and the resources can communicate with external networks.
 
-![Subnets](https://nextwork.ai/hl-2/uploads/7f907ac7-2473-5c15-a8be-edb36581cdba_157c4219)
 
 ### Auto-assigning public IPv4 addresses
 
@@ -67,8 +59,6 @@ Internet gateways are like bridges. They connect my vpc to the internet and othe
 
 Attaching an internet gateway to a VPC means im connected to the internet. If I missed this step I won't be able to communicate externally to other networks.
 
-![Internet gateways](https://nextwork.ai/hl-2/uploads/7f907ac7-2473-5c15-a8be-edb36581cdba_4ae90410)
-
 ## Using the AWS CLI
 
 ### What I'm doing in this extension
@@ -82,8 +72,6 @@ VPC resources could also be created with CloudShell, which is a command line int
 ### Debugging my setup
 
 To set up a VPC or a subnet, you can use the command aws ec2 create-subnet --vpc-id VPC-ID. Make sure to avoid errors by including the correct and lacking parameters.
-
-![Using the AWS CLI](https://nextwork.ai/hl-2/uploads/7f907ac7-2473-5c15-a8be-edb36581cdba_9b2465411)
 
 ### Comparing CloudShell vs AWS Console
 
